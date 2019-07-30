@@ -7,6 +7,15 @@
   </head>
   <body>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <ul>
+      <li v-for="todo in todos">
+        <input type="text" v-model="todo.title" />
+        <input type="button" value="編集" @click="update(todo)"/>
+        <input type="button" value="削除" @click="remove(todo)" />
+      </li>
+  </ul>
+  <input type="text" v-model="new_todo">
+  <input type="button" value="追加" @click="create">
   </body>
+  <script src="src/main.js"></script>
 </html>

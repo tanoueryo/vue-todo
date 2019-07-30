@@ -1,96 +1,64 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
+    <h1>ToDo App</h1>
+    <!-- <ul>
+        <li v-for="todo in todos" :key="todo">
+          <input type="text" v-model="todo.title" />
+          <input type="button" value="編集" @click="update(todo)"/>
+          <input type="button" value="削除" @click="remove(todo)"/>
+        </li>
     </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <input type="text" v-model="new_todo">
+    <input type="button" value="追加" @click="create"> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  // methods: {
+  //   // 一覧描画
+  //   read(){
+  //     fetch('http://localhost:3000/todos')
+  //       .then( res => res.json() )
+  //       .then( res => this.todos = res )
+  //   },
+    
+  //   // 新規追加
+  //   create(){
+  //     fetch('http://localhost:3000/todos', {
+  //       method: 'POST',
+  //       body: JSON.stringify({
+  //         title: this.new_todo
+  //       }),
+  //       headers: new Headers({ 'Content-type' : 'application/json' })
+  //     }).then( () => {
+  //       this.todos.push({
+  //         title: this.new_todo
+  //       })
+  //       this.new_todo = ''
+  //     })
+  //   },
+  
+  //   // 編集
+  //   update(todo){
+  //     fetch(`http://localhost:3000/todos/${todo.id}`, {
+  //       method: 'PUT',
+  //       body: JSON.stringify({
+  //         title: todo.title
+  //       }),
+  //       headers: new Headers({ 'Content-type' : 'application/json' })
+  //     })
+  //   },
+ 
+  //   // 削除
+  //   remove(todo){
+  //     fetch(`http://localhost:3000/todos/${todo.id}`, {
+  //       method: 'DELETE'
+  //     }).then( () => {
+  //       this.todos = this.todos.filter(item => item !== todo)
+  //     })
+  //   }
+  // }
 }
 </script>
 
